@@ -4,6 +4,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background: #131313;
   font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
   color: #fff;
 }
