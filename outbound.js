@@ -40,10 +40,17 @@ function fetchLoggedInData(response){
   adventure_image = adventure["images"][0]
   renderAdventureImage(adventure_image);
 
+  adventure_location = adventure['destination']['formatted_location'];
+  renderAdventureLocation(adventure_location);
+
   adventure_link = adventure["path"];
   renderAdventureLink(adventure_link);
 }
 
+
+function renderAdventureLocation(adventure_location){
+  $("#adventure-location").html(adventure_location);
+}
 
 function renderAdventureName(adventure_name){
   $("#adventure-name").html(adventure_name);
