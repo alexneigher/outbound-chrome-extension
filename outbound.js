@@ -27,7 +27,7 @@ function fetchNonLoggedInData(response){
 function fetchLoggedInData(response){
   response_json = JSON.parse(response);
 
-  //pull a random adventure from the set 
+  //pull a random adventure from the set
   random_index =  Math.floor(Math.random() * response_json.length)
   adventure = response_json[random_index];
 
@@ -50,7 +50,7 @@ function renderAdventureName(adventure_name){
 }
 
 function renderAdventureImage(adventure_image){
-  $("body").attr('style', 'background-image:url("'+adventure_image+'")');
+  $("body").attr('style', 'background-image:url("'+adventure_image+'fm=pjpg&auto=format&w=1500")');
 }
 
 function renderAdventureLink(adventure_link){

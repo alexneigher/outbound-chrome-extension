@@ -4,10 +4,19 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+  color: #fff;
 }
 
 
 #main-content{
-  text-align:center;
   margin-top: 80px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+#adventure-name{
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
 }
