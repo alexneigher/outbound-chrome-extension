@@ -25,6 +25,7 @@ $(function(){
 //generate some random content to prompt the user to log into the outbound
 function fetchNonLoggedInData(response){
   renderAdventureName('Want great content delivered daily to your new tabs?');
+  renderAdventureLocation('Log In to your Outbound Collective account!');
   renderAdventureImage(randomImageUrl());
   renderAdventureLink('/users/sign_in');
 }
@@ -72,9 +73,16 @@ function renderAdventureLink(adventure_link){
 
 function randomImageUrl(){
   var images = [
-    "https://www.theoutbound.com/assets/background_images/home-mtn-23f40cd56a9cc83dd2e1db77d04acf93f0403d7d7111bad02ac1824360c6780a.jpg",
-    "https://images.theoutbound.com/uploads/1508264320434/c2gs3e69sc/2a06774847564f699ae464f5a4aa1d2a?w=1200&h=630&fit=crop",
-    "https://images.theoutbound.com/groups/170800/assets/1498446073209?w=900&fit=crop&auto=format&q=50&dpr=2"
+    "https://images.theoutbound.com/uploads/1444186865519/e4s555pz6a65stt9/74e264315a778b5ecf22f5e05f63ede3?auto=format&q=90&w=1500&dpr=2",
+    "https://images.theoutbound.com/uploads/1417476401589/twnl9d0840nng66r/76f3bbeb3f68831e6a0793ecffd1397f?auto=format&q=90&w=1500&dpr=2",
+    "https://images.theoutbound.com/adventures/101252/assets/1413575406756?&auto=format&dpr=2",
+    "https://images.theoutbound.com/uploads/1422849919543/yvj8hz8eogu2qpvi/d5b074ebc35303af6b253b11569f5b57?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/contents/111813/assets/1477758335472?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/contents/109990/assets/1460902536393?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/contents/109372/assets/1460425944949?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/uploads/1468359750980/x3q3b1h1utehlmtz/944c22d099e202310c648d4d3fe36c8a?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/uploads/1480219553534/wdv3jltrkgqefu9d/9cc524d4ccc9e97214d76c15dcf95668?h=420&auto=format&q=50&h=600&w=900&dpr=2",
+    "https://images.theoutbound.com/uploads/1456634856010/u79u91d1w3njnhfr/892a799cc0945096e0983fde66f74de9?h=420&auto=format&q=50&h=600&w=900&dpr=2"
   ]
 
   index = Math.floor(Math.random() * images.length);
