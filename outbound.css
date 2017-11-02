@@ -29,6 +29,11 @@ body::after{
   z-index: 99;
 }
 
+#logo a{
+  z-index: 99;
+  position: relative;
+}
+
 #main-content{
   margin-top: 80px;
   position: absolute;
