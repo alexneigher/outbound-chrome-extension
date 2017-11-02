@@ -4,12 +4,14 @@ $(function(){
 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "https://www.theoutbound.com/api/adventures?page="+random_page+"", true);
-  if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    //the user has already logged into the outbound, you get data
-    fetchLoggedInData(xhr.response);
-  }else{
-    //user has not auth'd on the outbound site
-    fetchNonLoggedInData(xhr);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      //if the user has already logged into the outbound, you get data
+      fetchLoggedInData(xhr.response);
+
+    }else{
+      fetchNonLoggedInData(xhr);
+    }
   }
   xhr.send();
 });
