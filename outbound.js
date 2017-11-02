@@ -1,4 +1,10 @@
 $(function(){
+  //bind space bar for refresh
+  $('body').keyup(function(e){
+    if(e.keyCode == 32){
+      location.reload();
+    }
+  });
   //fetch a random page's worth of adventures
   random_page = Math.floor(Math.random() * 20)
 
