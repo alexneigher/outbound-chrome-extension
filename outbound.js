@@ -4,19 +4,24 @@ $(function(){
 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "https://www.theoutbound.com/api/adventures?page="+random_page+"", true);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      //if the user has already logged into the outbound, you get data
-      fetchLoggedInData(xhr.response);
-
-      //else we've never seen you before, update with random hard coded and prompt to login
-      //renderNotLoggedIn(xhr);
-    }
+  if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    //the user has already logged into the outbound, you get data
+    fetchLoggedInData(xhr.response);
+  }else{
+    //user has not auth'd on the outbound site
+    fetchNonLoggedInData(xhr);
   }
   xhr.send();
 });
 
+//generate some random content to prompt the user to log into the outbound
+function fetchNonLoggedInData(response){
+  renderAdventureName('Want great content delivered daily to your new tabs?');
+  renderAdventureImage('https://www.theoutbound.com/assets/background_images/home-mtn-23f40cd56a9cc83dd2e1db77d04acf93f0403d7d7111bad02ac1824360c6780a.jpg');
+  renderAdventureLink('/users/sign_in');
+}
 
+// because they're authenticated, show real data
 function fetchLoggedInData(response){
   response_json = JSON.parse(response);
 
@@ -24,6 +29,7 @@ function fetchLoggedInData(response){
   random_index =  Math.floor(Math.random() * response_json.length)
   adventure = response_json[random_index];
 
+  // for debugging
   console.log(adventure);
 
   adventure_name = adventure["name"];
