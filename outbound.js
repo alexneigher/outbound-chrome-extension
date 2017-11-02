@@ -61,7 +61,7 @@ function renderAdventureImage(adventure_image){
 }
 
 function renderAdventureLink(adventure_link){
-  $('#adventure-link').attr('href', "https://www.theoutbound.com/" + adventure_link);
+  $('#adventure-link').attr('href', "https://www.theoutbound.com" + adventure_link);
 }
 
 function randomImageUrl(){
