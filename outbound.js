@@ -9,7 +9,7 @@ $(function(){
   random_page = Math.floor(Math.random() * 20)
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://www.theoutbound.com/api/adventures?limit=7&page="+random_page+"", true);
+  xhr.open("GET", "https://www.theoutbound.com/api/adventures?sort=Newest&limit=7&page="+random_page+"", true);
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       //if the user has already logged into the outbound, you get data
