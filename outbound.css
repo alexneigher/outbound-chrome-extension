@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+#main-content{
+  text-align:center;
+  margin-top: 80px;
+  font-size: 80px;
+}

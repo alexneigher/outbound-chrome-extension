@@ -1,0 +1,20 @@
+{
+    "name": "The Outbound Collective",
+    "description": "Adventures hot off the press.",
+    "version": "0.0.0.1",
+    "manifest_version": 2,
+    
+    "browser_action": {
+      "default_icon": "outbound.png"
+    },
+    "icons": {
+      "16": "outbound.png",
+      "48": "outbound.png",
+      "128": "outbound.png"
+    },
+
+    "permissions" : ["management", "http://localhost:3000/", "https://www.theoutbound.com/"],
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    }
+}
